@@ -1,0 +1,1 @@
+document.write("<h1>que se dice</h1>");
