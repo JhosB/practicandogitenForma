@@ -1,89 +1,100 @@
-function llenarVector(vector, tam){
-    for (let i = 0; i < tam; i++) {
-        vector.push(Math.round(Math.random()*11));
-    }
-    return vector;
-}
+class operacion{
+	constructor(nu1,nu2){
+		this.nu1=nu1;
+		this.nu2=nu2;
 
-let vec=new Array();
+	}//llave constructor
+//metodos
 
-let x=5;
+sumar(){
+	let resultado=this.nu1 + this.nu2;
+	return (document.getElementById("nu3").value=resultado);
 
-console.log(llenarVector(vec,x));
+}//llave metodo
 
-console.log(vec[0]);
+restar(){
+	let resultado=this.nu1 - this.nu2;
+	return (document.getElementById("nu3").value=resultado);
 
-//hoisting
+}//llave metodo
 
-var sumaVector=(vector)=>{
+multiplicar(){
+	let resultado=this.nu1 * this.nu2;
+	return (document.getElementById("nu3").value=resultado);
 
-    let suma=0;
+}//llave metodo
 
-    for (let i = 0; i < vector.length; i++) {
-            suma += vec[i];
-    }
-    return suma;
-}
+dividir(){
+	let resultado=this.nu1 / this.nu2;
+	return (document.getElementById("nu3").value=resultado);
 
-console.log('la suma del vector es..' +sumaVector(vec));
+}//llave metodo
 
-var promedioVector=(vector)=>{
 
-    let suma=0;
-    let prom=0;
+}//llave clase
 
-    for (let i = 0; i < vector.length; i++) {
-            suma += vec[i];
-            prom = suma / vector.length;
-    }
-    return prom;
-}
+document.getElementById("suma").addEventListener("click",function(e){
 
-console.log('el promedio del vector es..'+promedioVector(vec));
+	v1=parseInt(document.getElementById("nu1").value);
+	
+	v2=parseInt(document.getElementById("nu2").value);
 
-var nMayorVector=(vector)=>{
+	const resul=new operacion(v1,v2);
 
-    let mayor=0;
+	//console.log(typeof(v1));//Arroja el tipo de valor que hay
 
-    for (let i = 0; i < vector.length; i++) {
-        mayor=Math.max(...vec);
-    }
-    return mayor;
-}
+	resul.sumar();
 
-console.log('el numero mayor del vector es..'+nMayorVector(vec));
+	e.preventDefault();
+});
 
-var nMenorVector=(vector)=>{
+//RESTAR
 
-    let menor=0;
+document.getElementById("restar").addEventListener("click",function(e){
 
-    for (let i = 0; i < vector.length; i++) {
-        menor=Math.min(...vec);
-    }
-    return menor;
-}
+	v1=parseInt(document.getElementById("nu1").value);
+	
+	v2=parseInt(document.getElementById("nu2").value);
 
-console.log('el numero menor del vector es..'+nMenorVector(vec));
+	const resul=new operacion(v1,v2);
 
-var MedianaVector=(vector)=>{
+	//console.log(typeof(v1));//Arroja el tipo de valor que hay
 
-    let l=0;
+	resul.restar();
 
-    for (let i = 0; i < vector.length; i++) {
-        
-    if(vector.length%2 === 0){
-                index = vec.length/2; 
-                let valor1 = vec[index];
-                let valor2 = vec[index-1];
-                mediana = (valor1 + valor2)/2;
-            }else{
-                index = vec.length/2; 
-                index = Math.floor(index);
-                mediana = vec[index];
-            }
-            return mediana;
-    } 
+	e.preventDefault();
+});
 
-}
+//MULTIPLICAR
 
-console.log('la mediana del vector es..'+MedianaVector(vec));
+document.getElementById("multiplicar").addEventListener("click",function(e){
+
+	v1=parseInt(document.getElementById("nu1").value);
+	
+	v2=parseInt(document.getElementById("nu2").value);
+
+	const resul=new operacion(v1,v2);
+
+	//console.log(typeof(v1));//Arroja el tipo de valor que hay
+
+	resul.multiplicar();
+
+	e.preventDefault();
+});
+
+//DIVIDIR
+
+document.getElementById("dividir").addEventListener("click",function(e){
+
+	v1=parseInt(document.getElementById("nu1").value);
+	
+	v2=parseInt(document.getElementById("nu2").value);
+
+	const resul=new operacion(v1,v2);
+
+	//console.log(typeof(v1));//Arroja el tipo de valor que hay
+
+	resul.dividir();
+
+	e.preventDefault();
+});
