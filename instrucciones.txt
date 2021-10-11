@@ -1,0 +1,9 @@
+ CRUD para ejecutar :
+  1. abrir o descargar carpeta "daoCRUDmvc"
+  2. Entcontraremos nuestra Base de datos con el nombre de "bd_crud_proyecto_cofi"  
+  3. IMPORTANTE      al momento de cargar la bd nombrar como cofi_01        IMPORTANTE 
+  4. para EJECUTAR  por favor Abrimos la carpeta vista en nuestro XAMPP Y Ejecutamos nuestro archivo INDEX.php
+  
+                                          FIN
+                                          GRACIAS POR SU TIEMPO 
+                                          Vuelva pronto:v 
