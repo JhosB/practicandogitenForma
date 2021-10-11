@@ -141,14 +141,14 @@ a {
 .head__section__section{
     float: left;
     width: 50%;
-    height: 958px;
+    height: 555px;
 }
 
 .head__section__section__h1{
     padding-top: 50%;
     text-align: center;
     color: #0A151F;
-    font-size: 80px;
+    font-size: 60px ;
     font-weight: 800;
     box-sizing: border-box;
 }
@@ -294,12 +294,12 @@ a {
     width: 100%;
     margin:0 auto;
     max-width: 10000px;
-    background-color: #54A136;
+
     overflow: hidden;
 }
 
 
-@media screen and (max-width: 1350px) {
+@media screen and (max-width: 1000px) {
     .head__section__section{
         width: 100%;
     }
@@ -308,6 +308,9 @@ a {
     }
     .head__contendor__img{
         width: 100%;
+    }
+    .head__section__section{
+        height: 100px;
     }
 }
 
