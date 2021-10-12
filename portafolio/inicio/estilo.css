@@ -263,28 +263,28 @@ a {
 
 .section_div--workIzquierda{
     width: 50%;
-    background-color: cornflowerblue;
+    /* background-color: cornflowerblue; */
     height: 900px;
     float: left;
 }
 
 .section_div--workDerecha{
     width: 50%;
-    background-color: rgb(221, 100, 237);
+    /* background-color: rgb(221, 100, 237); */
     height: 900px;
     float: right;
 }
 
 .section_div--workIzquierda:nth-child(1){
     width: 50%;
-    background-color: rgb(100, 237, 152);
+    /* background-color: rgb(100, 237, 152); */
     height: 900px;
     float: left;
 }
 
 .section_div--workDerecha:nth-child(2){
     width: 50%;
-    background-color: rgb(62, 41, 95);
+    /* background-color: rgb(62, 41, 95); */
     height: 900px;
     float: left;
 }
