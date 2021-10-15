@@ -1,5 +1,6 @@
 body{
-	background:-webkit-linear-gradient(top, rgb(71, 126, 197), rgb(0, 234, 255));
+	/* background:-webkit-linear-gradient(top, rgb(71, 126, 197), rgb(0, 234, 255)); */
+	background-color: #369681;
 	font-family: Arial;
 }
 
@@ -9,7 +10,8 @@ body{
 }
 
 #main-container-tabla{
-	float: left;
+	position: relative;
+	right: 700px;
 	margin: 0;
 }
 

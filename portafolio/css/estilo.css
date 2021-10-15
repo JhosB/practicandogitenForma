@@ -5,10 +5,7 @@
 
 body{
     font-family: 'roboto','sans serif';
-    background: #FFEFBA;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #FFFFFF, #FFEFBA);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #FFFFFF, #FFEFBA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
+    background: rgba(14, 12, 12, 0.938);
 }
 
 .checkbox{
@@ -141,23 +138,26 @@ a {
 .head__section__section{
     float: left;
     width: 50%;
-    height: 555px;
+    height: auto;
 }
 
 .head__section__section__h1{
-    padding-top: 50%;
+    width: 100%;
+    height: auto;
     text-align: center;
-    color: #0A151F;
+    color: #fbfbfb;
     font-size: 60px ;
     font-weight: 800;
-    box-sizing: border-box;
+    padding-top: 50%;
+
 }
 
 .head__section__section__h3{
+    width: 100%;
+    height: auto;
     text-align: center;
-    color: #0A151F;
+    color: #ffffff;
     font-size: 40px;
-    box-sizing: border-box;
 }
 
 .head__contendor__img{
@@ -171,6 +171,7 @@ a {
     width: 100%;
     height: 100%;
     box-sizing: border-box;
+    animation: meditacion 2.5s linear infinite;
 }
 
 /* .burbujas{
@@ -261,56 +262,112 @@ a {
     
 }
 
-.section_div--workIzquierda{
-    width: 50%;
-    /* background-color: cornflowerblue; */
-    height: 900px;
+@keyframes meditacion{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(30px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+
+.section_div--1{
+    width: 100%;
+    height: 10px;
     float: left;
 }
 
-.section_div--workDerecha{
+.section_div--2{
     width: 50%;
-    /* background-color: rgb(221, 100, 237); */
-    height: 900px;
+    background-color: #000046;
+    height: 800px;
+    float: left;
+}
+
+.section_div--2--img{
+    width: 90%;
+    height: 90%;
+    padding: 50px;
+    border-radius: 5px;
+}
+
+.section_div--3{
+    width: 50%;
+    background: #000046;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 800px;
+    float: left;
+}
+
+
+
+.section_div--4{
+    width: 50%;
+    background: #00c3ff;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #ffff1c, #00c3ff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #ffff1c, #00c3ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 800px;
+    float: left;
+}
+.section_div--5{
+    width: 50%;
+    background: #00c3ff;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #ffff1c, #00c3ff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #ffff1c, #00c3ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    height: 800px;
+    float: left;
+}
+
+.section_div--6{
+    width: 50%;
+    background: #fc00ff;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #00dbde, #fc00ff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #00dbde, #fc00ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    height: 800px;
     float: right;
 }
 
-.section_div--workIzquierda:nth-child(1){
+.section_div--7{
     width: 50%;
-    /* background-color: rgb(100, 237, 152); */
-    height: 900px;
+    background: #fc00ff;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #00dbde, #fc00ff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #00dbde, #fc00ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    height: 800px;
     float: left;
 }
 
-.section_div--workDerecha:nth-child(2){
-    width: 50%;
-    /* background-color: rgb(62, 41, 95); */
-    height: 900px;
-    float: left;
-}
+
 
 
 .body__contenedor{
     width: 100%;
     margin:0 auto;
+    height: auto;
     max-width: 10000px;
-
-    overflow: hidden;
 }
 
 
 @media screen and (max-width: 1000px) {
     .head__section__section{
         width: 100%;
+        height: 100px;
     }
     .head__section__section__h1{
         padding-top: 10%;
     }
+    .head__section__section__h3{
+        margin-bottom: 0%;
+    }
     .head__contendor__img{
         width: 100%;
-    }
-    .head__section__section{
-        height: 100px;
     }
 }
 
