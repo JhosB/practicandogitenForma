@@ -41,7 +41,7 @@ document.getElementById("suma").addEventListener("click",function(e){
 
 	const resul=new operacion(v1,v2);
 
-	//console.log(typeof(v1));//Arroja el tipo de valor que hay
+	console.log(typeof(v1));//Arroja el tipo de valor que hay
 
 	resul.sumar();
 

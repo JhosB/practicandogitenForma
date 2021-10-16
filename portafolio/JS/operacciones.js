@@ -9,9 +9,9 @@ let vec=new Array();
 
 let x=5;
 
-console.log(llenarVector(vec,x));
+document.write(llenarVector(vec,x));
 
-console.log(vec[0]);
+document.write(vec[0]);
 
 //hoisting
 
@@ -25,7 +25,7 @@ var sumaVector=(vector)=>{
     return suma;
 }
 
-console.log('la suma del vector es..' +sumaVector(vec));
+document.write('<br>la suma del vector es..' +sumaVector(vec));
 
 var promedioVector=(vector)=>{
 
@@ -39,7 +39,7 @@ var promedioVector=(vector)=>{
     return prom;
 }
 
-console.log('el promedio del vector es..'+promedioVector(vec));
+document.write('<br>el promedio del vector es..'+promedioVector(vec));
 
 var nMayorVector=(vector)=>{
 
@@ -51,7 +51,7 @@ var nMayorVector=(vector)=>{
     return mayor;
 }
 
-console.log('el numero mayor del vector es..'+nMayorVector(vec));
+document.write('<br>el numero mayor del vector es..'+nMayorVector(vec));
 
 var nMenorVector=(vector)=>{
 
@@ -63,7 +63,7 @@ var nMenorVector=(vector)=>{
     return menor;
 }
 
-console.log('el numero menor del vector es..'+nMenorVector(vec));
+document.write('<br>el numero menor del vector es..'+nMenorVector(vec));
 
 var MedianaVector=(vector)=>{
 
@@ -86,4 +86,4 @@ var MedianaVector=(vector)=>{
 
 }
 
-console.log('la mediana del vector es..'+MedianaVector(vec));
+document.write('<br>la mediana del vector es..'+MedianaVector(vec));

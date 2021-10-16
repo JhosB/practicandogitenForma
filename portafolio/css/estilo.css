@@ -344,6 +344,20 @@ a {
     float: left;
 }
 
+.section_div--8{
+    width: 50%;
+    background: rgba(14, 12, 12, 0.938);
+    height: 800px;
+    float: left;
+}
+
+.section_div--9{
+    width: 50%;
+    background: rgba(14, 12, 12, 0.938);
+    height: 800px;
+    float: left;
+}
+
 
 
 

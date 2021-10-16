@@ -88,12 +88,12 @@ input[type="checkbox"]{
 }
 
 .body__contenedor{
-    background-color: #4158d0;
+    background-color: #d0ce41;
     width: 100%;
     height: auto;
     display: grid;
     grid-gap: 20px;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, auto);
 }
 
