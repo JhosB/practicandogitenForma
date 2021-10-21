@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css"
+    <title>JavaScript</title>
+    <script src="operacciones.js"></script>
+</head>
+<body>
+    <div class="contenedor">
+        <h2>Fraccionarios</h2>
+        <pre class="contenedor__fraccionarios">
+            class operacion{
+                constructor(nu1,nu2){
+                    this.nu1=nu1;
+                    this.nu2=nu2;
+            
+                }//llave constructor
+            //metodos
+            
+            sumar(){
+                let resultado=this.nu1 + this.nu2;
+                return (document.getElementById("nu3").value=resultado);
+            
+            }//llave metodo
+            
+            restar(){
+                let resultado=this.nu1 - this.nu2;
+                return (document.getElementById("nu3").value=resultado);
+            
+            }//llave metodo
+            
+            multiplicar(){
+                let resultado=this.nu1 * this.nu2;
+                return (document.getElementById("nu3").value=resultado);
+            
+            }//llave metodo
+            
+            dividir(){
+                let resultado=this.nu1 / this.nu2;
+                return (document.getElementById("nu3").value=resultado);
+            
+            }//llave metodo
+            
+            
+            }//llave clase
+            
+            document.getElementById("suma").addEventListener("click",function(e){
+            
+                v1=parseInt(document.getElementById("nu1").value);
+                
+                v2=parseInt(document.getElementById("nu2").value);
+            
+                const resul=new operacion(v1,v2);
+            
+                console.log(typeof(v1));//Arroja el tipo de valor que hay
+            
+                resul.sumar();
+            
+                e.preventDefault();
+            });
+            
+            //RESTAR
+            
+            document.getElementById("restar").addEventListener("click",function(e){
+            
+                v1=parseInt(document.getElementById("nu1").value);
+                
+                v2=parseInt(document.getElementById("nu2").value);
+            
+                const resul=new operacion(v1,v2);
+            
+                //console.log(typeof(v1));//Arroja el tipo de valor que hay
+            
+                resul.restar();
+            
+                e.preventDefault();
+            });
+            
+            //MULTIPLICAR
+            
+            document.getElementById("multiplicar").addEventListener("click",function(e){
+            
+                v1=parseInt(document.getElementById("nu1").value);
+                
+                v2=parseInt(document.getElementById("nu2").value);
+            
+                const resul=new operacion(v1,v2);
+            
+                //console.log(typeof(v1));//Arroja el tipo de valor que hay
+            
+                resul.multiplicar();
+            
+                e.preventDefault();
+            });
+            
+            //DIVIDIR
+            
+            document.getElementById("dividir").addEventListener("click",function(e){
+            
+                v1=parseInt(document.getElementById("nu1").value);
+                
+                v2=parseInt(document.getElementById("nu2").value);
+            
+                const resul=new operacion(v1,v2);
+            
+                //console.log(typeof(v1));//Arroja el tipo de valor que hay
+            
+                resul.dividir();
+            
+                e.preventDefault();
+            });
+        </pre>
+        <h2 class="contenedor__herencia__h2">herencia</h2>
+        <pre class="contenedor__herencia">
+            class Persona {
+                constructor(nombre, apellido, numDoc) {
+                    this._nombre = nombre;
+                    this._apellido = apellido;
+                    this._numDoc = numDoc;
+                }
+            
+                get nombre() {
+                    return this._nombre;
+                }
+            
+                set nombre(nombre) {
+                    this._nombre = nombre;
+                }
+            
+                get apellido() {
+                    return this._apellido;
+                }
+            
+                set apellido(apellido) {
+                    this._apellido = apellido;
+                }
+            
+                get numDoc() {
+                    return this._numDoc;
+                }
+            
+                set numDoc(numDoc) {
+                    this._numDoc = numDoc;
+                }
+            }
+            
+            class Cliente extends Persona {
+                constructor(nombre, apellido, numDoc, idCliente, correo, telefono) {
+                    super(nombre, apellido, numDoc);
+                    this._idCliente = idCliente;
+                    this._correo = correo;
+                    this._telefono = telefono;
+            
+                }
+            
+                get idCliente() {
+                    return this._idCliente;
+                }
+            
+                set idCliente(idCliente) {
+                    this._idCliente = idCliente;
+                }
+            
+                get correo() {
+                    return this._correo;
+                }
+            
+                set correo(correo) {
+                    this._correo = correo;
+                }
+            
+                get telefono() {
+                    return this._telefono;
+                }
+            
+                set telefono(telefono) {
+                    this._telefono = telefono;
+                }
+            
+            }
+            
+            var ob = new Persona('anita', 'rasalda', 1278931);
+            // Recomendacion ejecutar por consola console.log(ob);
+            document.write(ob);
+            
+            var clt = new Cliente('magnus', 'karsen', 1278931, 001, 'karsen@gmail.com', 314);
+            // Recomendacion ejecutar por consola console.log(clt);
+            document.write(ob);
+        </pre>
+        <h2>operacciones</h2>
+        <pre class="contenedor__operacciones">
+            function llenarVector(vector, tam){
+                for (let i = 0; i < tam; i++) {
+                    vector.push(Math.round(Math.random()*11));
+                }
+                return vector;
+            }
+            
+            let vec=new Array();
+            
+            let x=5;
+            
+            document.write(llenarVector(vec,x));
+            
+            document.write(vec[0]);
+            
+            //hoisting
+            
+            var sumaVector=(vector)=>{
+            
+                let suma=0;
+            
+                for (let i = 0; i < vector.length; i++) {
+                        suma += vec[i];
+                }
+                return suma;
+            }
+            
+            document.write('<br>la suma del vector es..' +sumaVector(vec));
+            
+            var promedioVector=(vector)=>{
+            
+                let suma=0;
+                let prom=0;
+            
+                for (let i = 0; i < vector.length; i++) {
+                        suma += vec[i];
+                        prom = suma / vector.length;
+                }
+                return prom;
+            }
+            
+            document.write('<br>el promedio del vector es..'+promedioVector(vec));
+            
+            var nMayorVector=(vector)=>{
+            
+                let mayor=0;
+            
+                for (let i = 0; i < vector.length; i++) {
+                    mayor=Math.max(...vec);
+                }
+                return mayor;
+            }
+            
+            document.write('<br>el numero mayor del vector es..'+nMayorVector(vec));
+            
+            var nMenorVector=(vector)=>{
+            
+                let menor=0;
+            
+                for (let i = 0; i < vector.length; i++) {
+                    menor=Math.min(...vec);
+                }
+                return menor;
+            }
+            
+            document.write('<br>el numero menor del vector es..'+nMenorVector(vec));
+            
+            var MedianaVector=(vector)=>{
+            
+                let l=0;
+            
+                for (let i = 0; i < vector.length; i++) {
+                    
+                if(vector.length%2 === 0){
+                            index = vec.length/2; 
+                            let valor1 = vec[index];
+                            let valor2 = vec[index-1];
+                            mediana = (valor1 + valor2)/2;
+                        }else{
+                            index = vec.length/2; 
+                            index = Math.floor(index);
+                            mediana = vec[index];
+                        }
+                        return mediana;
+                } 
+            
+            }
+            
+            document.write('<br>la mediana del vector es..'+MedianaVector(vec));
+        </pre>
+    </div>
+</body>
+</html>

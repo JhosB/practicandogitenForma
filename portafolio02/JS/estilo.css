@@ -1,0 +1,10 @@
+.contenedor__fraccionarios,
+.contenedor__operacciones,
+.contenedor__herencia{
+    justify-content: center;
+    background-color: blanchedalmond;
+    width: 900px;
+    height: 900px;
+    overflow: auto;
+}
+
