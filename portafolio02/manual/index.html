@@ -4,24 +4,43 @@
     <meta charset="utf-8">
     <title>Manual usuario y sistema</title>
     <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="../fonts/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
 <body>
-    <input type="checkbox" id="active">
-    <label for="active" class="menu-btn"><i class="fas fa-bars"></i></label>
-    <div class="wrapper">
-        <ul>
-            <li><a href="index.html">Usuario y Software</a></li>
-            <li><a href="b.html">Items</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">Feedback</a></li>
-        </ul>
-    </div>
     <div class="body__contenedor">
-        <main class="main__contenedor">
-            <h1 class="main__contenedor__h1">Manual de Usuario</h1>
-            <p class="main__contenedor__p">Este manual busca explicar paso a paso cada una de las operaciones
+        <header class="header">
+            <div class="header__div" id="uno">
+                <a href="index.html"><span class="icon-open-book"></span></a>
+                <p class="header__div__p">MANUALES</p>
+            </div>
+            <div class="header__div" id="dos">
+                <a target="_blank" href="../inicio/index.html"><span class="icon-clipboard"></span></a>
+                <p class="header__div__p">ITEMS</p>
+            </div>
+            <div class="header__div" id="tres">
+                <a target="_blank" href="../inicio/index.html"><span class="icon-rocket"></span></a>
+                <p class="header__div__p">COMPONENTES</p>
+            </div>
+            <div class="header__div" id="cuatro">
+                <a target="_blank" href="../inicio/index.html"><span class="icon-ticket"></span></a>
+                <p class="header__div__p">OBJETIVOS</p>
+            </div>
+            <div class="header__div" id="cinco">
+                <a target="_blank" href="../inicio/index.html"><span class="icon-folder"></span></a>
+                <p class="header__div__p">QUE SE DICE</p>
+            </div>
+            <div class="header__div" id="seis">
+                <a target="_blank" href="../inicio/index.html"><span class="icon-home"></span></a>
+                <p class="header__div__p">DIAGRAMAS</p>
+            </div>
+        </header>
+    
+
+        <section class="section__contenedor1">
+            <h1 class="section__contenedor1__h1">Manual de Usuario</h1>
+            <p class="section__contenedor1__p">Este manual busca explicar paso a paso cada una de las operaciones
                 que se pueden realizar en la aplicación, es un manual muy gráfico, con
                 lenguaje de fácil interpretación; y se construye de tal manera, que sea de
                 fácil comprensión para los “usuarios finales” de la aplicación.<br>
@@ -29,15 +48,11 @@
                 logre manejar la aplicación correctamente.<br>
                 Algunos de los ítems que se deben relacionar en este manual los podemos entontrar en el apartado de items en el menu
             </p>
-        </main>
+        </section>
 
-        <aside class="aside1">
-            <img class="aside1__img1" src="./img/user.jpg" alt="manual de usuario">
-        </aside>
-
-        <main class="main__contenedor">
-            <h1 class="main__contenedor__h1">Manual de Software o tecnico</h1>
-            <p class="main__contenedor__p">Este manual va dirigido al área de soporte técnico de la organización
+        <section class="section__contenedor2">
+            <h2 class="section__contenedor2__h2">Manual de Software o tecnico</h2>
+            <p class="section__contenedor2__p">Este manual va dirigido al área de soporte técnico de la organización
                 o a quien haga sus veces, ya que en él se detallan aspectos sobre la
                 estructura del Sistema que le permitirá entender su funcionamiento global
                 y posibilitar el mantenimiento del mismo.<br>
@@ -49,12 +64,17 @@
                 el informe de análisis, el de diseño, entre otros.<br>
                 Algunos de los componentes que se deben relacionar en este documento los podemos entontrar en el apartado de componentes en el menu
             </p>
-        </main>
+        </section>
 
-        <aside class="aside2">
-            <img class="aside__img2" src="./img/sistem.jpg" alt="manual de Software">
-        </aside>
+        <div class="div1">
+            <img class="div1__img1" src="./img/user.jpg" alt="manual de usuario">
+        </div>
+
+        <div class="div2">
+            <img class="div2__img2" src="./img/sistem.jpg" alt="manual de Software">
+        </div>
 
     </div>
+    <script src="main.js"></script>
 </body>
 </html>
